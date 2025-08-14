@@ -52,7 +52,7 @@ def create_app():
      supports_credentials=True,
      origins=[
          "http://localhost:5173",
-         "https://cert-genie-design.vercel.app/"
+         "https://cert-genie-design.vercel.app"
      ],
      allow_headers=["Content-Type", "Authorization"],
      methods=["GET", "POST", "OPTIONS"])
