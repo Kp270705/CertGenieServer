@@ -69,6 +69,7 @@ class PDF(FPDF):
         self.set_text_color(text_color)
         self.multi_cell(270, 8, text=self.section1, align='C')
         self.ln(4)
+        print(f"#Random check...Section 1...")
         
         sec2 = f"{certType.upper()}"
         spacedSection2 = add_spacing(sec2, 1)
@@ -141,6 +142,7 @@ class PDF(FPDF):
         self.cell(90, 3, text=f"{spacedSection10a}", align='C')
         self.set_left_margin(50)
         self.cell(50, 3, text=f"{spacedSection10b}", align='C')
+        print(f"Certificate designed...\n")
 
 
 
@@ -386,9 +388,6 @@ def getCertData(csvData, eventname, orgName, certType, org1_desig, org2_desig, c
         pdf.output(out_file)
         print(f"\n{i} certificate is being generated...\n")
 
-
-        # if action == "Generate":
-        #     send_mails("kunalpathak4774@gmail.com", csv.emailId, out_file, eventname, certType)
 
     if action == "Generate":
         recipients = [
